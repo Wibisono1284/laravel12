@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Periksa extends Model
 {
     protected $fillable = [
@@ -24,8 +25,13 @@ class Periksa extends Model
         return $this->belongsTo(User::class, 'id_dokter');
     }
 
+
+
+
     //public function detailPeriksa()
     //{
     //    return $this->hasMany(DetailPeriksa::class, 'id_periksa');
     //}
 }
+
+

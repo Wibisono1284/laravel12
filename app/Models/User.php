@@ -59,3 +59,11 @@ class User extends Authenticatable
         ];
     }
 }
+
+try {
+    // Eksekusi query
+} catch (\Illuminate\Database\QueryException $e) {
+    // Log atau tampilkan pesan error yang lebih jelas
+    \Log::error('Query Error: ' . $e->getMessage());
+    return back()->withErrors(['error' => 'Terjadi kesalahan pada database.']);
+}
